@@ -1,0 +1,13 @@
+---
+interface Props {
+  src: string
+}
+
+const { src } = Astro.props
+---
+
+<li>
+  <picture>
+    <img src={src} alt="Imagen de Proyecto TOYP" class="p-2" />
+  </picture>
+</li>

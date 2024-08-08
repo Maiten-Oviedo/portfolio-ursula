@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string
+  rol: string
+  period: string
+  description: string
+  image: string
+}
+
+const { title, rol, period, description, image } = Astro.props
+---
+
+<article class="flex justify-between">
+  <div class="w-[55%] pr-8">
+    <div class="border-l-8 border-l-[#31a0eb] pl-8 mb-5">
+      <h2 class="text-5xl text-[#35aeff] font-bold">{title}</h2>
+      <h3 class="text-base font-bold">{rol}</h3>
+      <h4>{period}</h4>
+    </div>
+    <p class="pl-8 text-lg">
+      {description}
+    </p>
+  </div>
+  <picture class="w-[35%]">
+    <img src={image} alt={`Imagen de ${title}`} class="w-full" />
+  </picture>
+</article>

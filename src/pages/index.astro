@@ -1,0 +1,58 @@
+---
+import AboutMe from '../components/AboutMe.astro'
+import Contact from '../components/Contact.astro'
+import Experience from '../components/Experience.astro'
+import PresentationCard from '../components/PresentationCard.astro'
+import Studies from '../components/Studies.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="relative size-full">
+    <section
+      class="z-10 relative w-full flex items-center h-screen px-[15%] bg-no-repeat bg-center bg-cover bg-fixed"
+    >
+      <PresentationCard />
+      <div id="blur"></div>
+    </section>
+    <section id="experience" class="relative flex p-10 justify-center">
+      <Experience />
+    </section>
+    <section
+      id="about"
+      class="flex flex-col justify-center items-left px-[2%] md:px-[15%] pt-20"
+    >
+      <AboutMe />
+    </section>
+    <section class="px-[15%]">
+      <Studies />
+    </section>
+    <section
+      id="contact"
+      class="flex flex-col justify-center items-left md:px-[15%] pt-20"
+    >
+      <Contact />
+    </section>
+
+    <div
+      class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
+    >
+    </div>
+  </main>
+</Layout>
+
+<style>
+  #blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/assets/fondo-home.jpg'); /* Imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-size: cover;
+    filter: blur(0.7px);
+    z-index: 1;
+  }
+</style>

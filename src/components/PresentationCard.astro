@@ -1,0 +1,47 @@
+---
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import NetWorkPill from './NetWorkPill.astro'
+import InstagramIcon from '../icons/InstagramIcon.astro'
+---
+
+<article class="max-w-max flex items-center z-10 gap-4">
+  <picture class="w-56">
+    <img
+      src="/assets/me.jpeg"
+      alt="Fotografía de Úrsula Castro"
+      class="w-full"
+    />
+  </picture>
+  <div
+    class="text-zinc-900 flex flex-col justify-between h-full gap-3 font-medium"
+  >
+    <div>
+      <h3 class="italic text-xl font-semibold">Úrsula Castro</h3>
+      <h2 class="text-4xl">Estudiante de Lic. en</h2>
+      <h1
+        class="text-5xl uppercase border-b-2 border-b-black/20 mb-8 pb-2 text-[#31a0eb] font-semibold"
+      >
+        Administración
+      </h1>
+    </div>
+    <a
+      href="#experience"
+      class="p-2 bg-[#48277c] text-zinc-100 hover:bg-[#5c32a0] hover:scale-[1.02] transition cursor-pointer text-center"
+      >EXPERIENCIA</a
+    >
+    <ul class="flex gap-2">
+      <li>
+        <NetWorkPill href="https://www.linkedin.com/in/maiten-oviedo/">
+          <LinkedinIcon class="size-4" />
+          LinkedIn
+        </NetWorkPill>
+      </li>
+      <li class="flex gap-4 text-wrap">
+        <NetWorkPill href="https://www.instagram.com/maiten_oviedo">
+          <InstagramIcon class="size-4" />
+          Instagram
+        </NetWorkPill>
+      </li>
+    </ul>
+  </div>
+</article>

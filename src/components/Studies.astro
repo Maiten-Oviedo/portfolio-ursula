@@ -1,0 +1,44 @@
+---
+import BooksIcon from '../icons/BooksIcon.astro'
+import Studiesitem from './Studiesitem.astro'
+
+const STUDIES = [
+  {
+    name: 'Licenciatura en Administración',
+    institution: 'Universidad Nacional de Cuyo.',
+    period: '2020 - PRESENTE',
+    description:
+      'He adquirido una formación integral en la gestión eficiente de recursos en organizaciones a través de mi Licenciatura en Administración. Además, aprendí a planificar, organizar y dirigir entidades, abordando aspectos comerciales, operativos y financieros. Esta carrera me ha preparado para asumir roles de liderazgo, proporcionando una visión global que me permite resolver problemas y tomar decisiones estratégicas.',
+  },
+  {
+    name: 'Curso | Monotributos e Ingresos Brutos',
+    institution: 'Centro de Estudiantes | Universidad Nacional de Cuyo',
+    period: '2023',
+    description:
+      'Curso en el que adquirí conocimientos sobre el Régimen Simplificado para Pequeños Contribuyentes (Monotributo), abarcando aspectos clave como los requisitos, categorías y obligaciones fiscales. Aprendí los procedimientos para la correcta inscripción en la AFIP, la gestión de pagos y la presentación de declaraciones, asegurando el cumplimiento con la normativa vigente.',
+  },
+  {
+    name: 'Bachiller en Economía y Administración',
+    institution: 'Escuela Secundaria Arq. Carlos Thays.',
+    period: '2016 - 2020',
+    description:
+      'Completé mis estudios secundarios con un enfoque en Economía y Administración, dedicando cinco años a aprender las bases de Contabilidad y Administración y recibiendo una introducción a la Economía. En mi último año, desarrollé un microemprendimiento de artesanías y decoraciones utilizando corchos.',
+  },
+]
+---
+
+<div class="flex flex-col gap-10">
+  <h2 class="text-8xl font-bold flex items-end gap-2">
+    <BooksIcon class="size-20" />
+    Estudios
+  </h2>
+  <ol
+    class="relative border-s border-gray-200 dark:border-gray-700 w-full pl-6"
+  >
+    {
+      STUDIES.map(proyect => {
+        return <Studiesitem {...proyect} />
+      })
+    }
+  </ol>
+</div>

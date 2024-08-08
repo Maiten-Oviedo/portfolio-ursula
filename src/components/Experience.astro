@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro'
+import ExperienceCard from '../components/ExperienceCard.astro'
+import PortfolioIcon from '../icons/PortfolioIcon.astro'
+
+const EXPERIENCE = [
+  {
+    id: 1,
+    title: 'Voluntariado',
+    rol: 'JCI (Cámara Junior Internacional)',
+    period: '2023 / Actualidad',
+    description:
+      'En mi voluntariado actual, he desarrollado habilidades en liderazgo, trabajo en equipo y oratoria mientras participo en el desarrollo de proyectos. Mi rol incluye coordinar actividades, colaborar eficazmente con otros miembros y presentar ideas y proyectos de manera clara y persuasiva.',
+    image: '/assets/experience/jci.jpg',
+  },
+  {
+    id: 2,
+    title: 'Proyecto COIL - UTP',
+    rol: 'Atención al cliente',
+    period: 'Jul 2021/ Oct 2021',
+    description:
+      'Como asistente de ventas, me encargué de vender ropa, juguetes y calzados, además de mantener el local limpio y ordenado. Proporcioné atención al cliente personalizada y gestioné el inventario para asegurar una experiencia de compra eficiente y satisfactoria.',
+    image: '/assets/experience/coil.png',
+  },
+  {
+    id: 3,
+    title: 'Sergio Sport',
+    rol: 'Atención al cliente',
+    period: 'Jul 2021/ Oct 2021',
+    description:
+      'Como asistente de ventas, me encargué de vender ropa, juguetes y calzados, además de mantener el local limpio y ordenado. Proporcioné atención al cliente personalizada y gestioné el inventario para asegurar una experiencia de compra eficiente y satisfactoria.',
+    image: '/assets/experience/tienda-de-ropa.jpg',
+  },
+]
+---
+
+<d class="flex flex-col justify-center items-left gap-10 px-[15%] pt-10">
+  <h1 class="font-bold text-8xl flex gap-2 items-end">
+    <PortfolioIcon class="size-20" /> Experiencia
+  </h1>
+  <p class="text-2xl h-max">
+    Aquí puedes ver mis experiencias. No olvides seguirme en mis redes.
+  </p>
+  <ol class="flex flex-col justify-center w-full gap-8">
+    {
+      EXPERIENCE.map(experience => {
+        return (
+          <li>
+            <ExperienceCard {...experience} />
+          </li>
+        )
+      })
+    }
+  </ol>
+</d>

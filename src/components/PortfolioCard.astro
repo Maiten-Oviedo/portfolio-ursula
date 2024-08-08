@@ -1,0 +1,23 @@
+---
+import ArrowIcon from '../icons/ArrowIcon.astro'
+
+interface Porps {
+  bg: string
+}
+const { bg } = Astro.props
+const bgStyle = {
+  background: bg,
+}
+---
+
+<article
+  style={bgStyle}
+  class="w-full h-[500px] text-zinc-100 text-3xl uppercase flex flex-col gap-4 justify-center items-center"
+>
+  <a class="" href="/portfolio/experience">
+    <i class="flex gap-2 items-center hover:scale-[1.02] transition">
+      <slot />
+      <ArrowIcon class="size-6 text-zinc-100" />
+    </i>
+  </a>
+</article>

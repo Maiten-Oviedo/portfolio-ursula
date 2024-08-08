@@ -1,0 +1,50 @@
+---
+const PROYECTOS = [
+  {
+    id: 1,
+    nombre: 'Proyecto 1',
+    descripcion: 'Este es el proyecto 1',
+    imagen: 'https://picsum.photos/200/300',
+    url: 'https://www.google.com',
+  },
+]
+import UserIcon from '../icons/UserIcon.astro'
+import AboutMeImage from './AboutMeImage.astro'
+---
+
+<h1 class="font-bold text-8xl flex gap-2 items-center">
+  <UserIcon class="size-20" /> Sobre Mí
+</h1>
+<div class="flex gap-10 pt-5">
+  <div class="flex flex-col gap-6 text-center font-semibold">
+    <p class="text-xl h-max">
+      Soy estudiante de <span class="uppercase text-[#31a0eb]"
+        >Licenciatura en Administración</span
+      > y estoy en la etapa final de mi carrera. He adquirido conocimientos en gestión
+      empresarial, planificación de proyectos y toma de decisiones👩‍🎓 .
+    </p>
+    <p class="text-xl h-max">
+      Actualmente, participo en un voluntariado donde he mejorado mis
+      habilidades en liderazgo, trabajo en equipo y oratoria, coordinando
+      actividades y presentando proyectos📚 .
+    </p>
+    <p class="text-xl h-max">
+      Además, tengo experiencia en ventas y atención al cliente, gestionando la
+      venta de ropa, juguetes y calzados, y manteniendo el local limpio y
+      ordenado. Estas experiencias me han proporcionado una visión práctica del
+      comercio minorista.
+    </p>
+  </div>
+</div>
+<ul
+  id="container"
+  class="w-full max-w-7xl md:max-w-5xl pt-5 pb-10 mx-auto mb-10 gap-1 columns-2 md:columns-3"
+>
+  <AboutMeImage src="/assets/about-me/toyp-jci.jpg" />
+  <AboutMeImage src="/assets/about-me/proyecto-grupal-jci.jpg" />
+  <AboutMeImage src="/assets/about-me/reunion-jci.jpg" />
+  <AboutMeImage src="/assets/about-me/parque-jci.jpg" />
+  <AboutMeImage src="/assets/about-me/asamblea-jci.jpeg" />
+  <AboutMeImage src="/assets/about-me/foto-grupal-jci.jpg" />
+</ul>
+<style></style>
