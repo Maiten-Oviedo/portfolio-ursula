@@ -26,11 +26,11 @@ const NavBar = () => {
   }
   return (
     <nav
-      className="fixed z-20 px-[15%] w-full flex justify-between items-center p-4 transition font-bold"
+      className="fixed z-20 px-[5%] lg:px-[15%] w-full flex justify-between items-center p-4 transition font-bold"
       style={bgStyle}
     >
       <h1 className="text-5xl italic font-normal">Úrsula Castro</h1>
-      <ul className="list-none flex gap-8 items-center text-xl text-zinc-950">
+      <ul className="hidden list-none lg:flex gap-8 items-center text-xl text-zinc-950">
         <li className="hover:text-[#31a0eb] hover:scale-[1.02] transition-500">
           <a href="#">INICIO</a>
         </li>
