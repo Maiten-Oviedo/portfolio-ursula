@@ -30,7 +30,7 @@ const NavBar = () => {
       style={bgStyle}
     >
       <h1 className="text-5xl italic font-normal">Úrsula Castro</h1>
-      <ul className="hidden list-none lg:flex gap-8 items-center text-xl text-zinc-950">
+      <ul className="hidden list-none sm:flex gap-8 items-center sm:text-base lg:text-xl text-zinc-950">
         <li className="hover:text-[#31a0eb] hover:scale-[1.02] transition-500">
           <a href="#">INICIO</a>
         </li>

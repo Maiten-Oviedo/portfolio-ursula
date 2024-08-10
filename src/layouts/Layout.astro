@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro'
 import NavBar from '../components/NavBar.jsx'
 
 interface Props {
@@ -22,6 +23,9 @@ const { title } = Astro.props
   <body class="">
     <header><NavBar client:load /></header>
     <slot />
+    <footer>
+      <Footer />
+    </footer>
   </body>
 </html>
 <style is:global>
